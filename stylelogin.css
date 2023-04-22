@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body{
+	font-family: 'Roboto';
+	background: #EAE9FF;
+}
+.inner-row{
+	height: 100vh;
+}
+.primaryBg{
+	background-color: #184D9D;
+}
+.primaryColor{
+	color:blueviolet;
+}
+.form-box{
+	background-color: #FFF;
+	box-shadow: 0 0 20px 0 rgba(0,0,0,0.2), 0 5px 5px 0  rgba(0,0,0,0.24);
+}
