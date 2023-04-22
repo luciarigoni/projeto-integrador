@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
 .bg-custom {
     background-color: #181547;
 }
@@ -123,3 +124,18 @@
       margin-right: 0;
   }
 }
+</***** Diario *****/
+.container {
+  padding: 2rem 0rem;
+}
+
+h4 {
+  margin: 2rem 0rem 1rem;
+}
+
+.table-image {
+  td, th {
+    vertical-align: middle;
+  }
+}
+/***** End Diario *****/
