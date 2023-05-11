@@ -1,4 +1,7 @@
-# projeto-integrador
+# Projeto Integrador 
 
-https://github.com/luciarigoni/projeto-integrador/assets/57507219/35658407-b22c-4c56-a1b1-05c2e9ac5cbd
+Desenvolvimento de um sistema web para gestão da rotina diária de um
+agrupamento de uma creche pública da cidade de Campinas-SP.
+
+https://github.com/luciarigoni/projeto-integrador/assets/57507219/5b873c13-d375-444b-8aeb-e5ed6d296f00
 
