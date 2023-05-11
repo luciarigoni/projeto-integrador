@@ -16,10 +16,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 </head>
 <body>
-  <nav class="navbar navbar-inverse bg-custom registration-form">
-    <span class="navbar-text text-custom">
-        Diário digital do aluno | CEI Cláudio de Souza Novaes
-    </span>
+    <nav class="navbar navbar-inverse bg-custom registration-form sticky-top">
+        <span class="navbar-text text-custom">
+            Diário de classe digital | CEI Cláudio de Souza Novaes
+        </span>
   </nav>
   <div id="wrapper">
 
@@ -32,10 +32,10 @@
                 </a>
             </li>
             <li>
-                <a href="#.html">Dados pessoais</a>
+                <a href="#.html">Consultar o diário</a>
             </li>
             <li>
-                <a href="#.html">Consultar o diário do aluno</a>
+                <a href="#.html">Dados pessoais</a>
             </li>
             <li>
                 <a href="login.html">Sair</a>
@@ -45,16 +45,108 @@
     <!-- /#sidebar-wrapper -->
 
     <div>
-        <h3 class="pt-4 pb-2">Comunicados:</h3>
-        <p>Comunicamos que não haverá aula, conforme decreto 4.506 de 15/12/2022, nos dias:</p>
+        <h3 class="pt-4 pb-2" style="padding-left: 20px;">Comunicados:</h3>
+        <p  style="padding-left: 20px;">Comunicamos que não haverá aula, conforme decreto 4.506 de 15/12/2022, nos dias:</p>
         <ul>
             <li>20/02/2023 (Segunda-feira) - Ponto facultativo</li>
             <li>21/02/2023 (Terça-feira) - Feriado de Carnaval</li>
             <li>22/02/2023 (Quarta-feira) - Ponto facultativo</li>
         </ul>
     </div>
-    <section class="container">
-        <h5 class="pt-4 pb-2">Consultar diário anterior</h5>
+    <div>
+        <h5 class="pt-4 pb-2" style="padding-left: 20px;">Resumo do dia: </h5>
+        
+        <div style="padding-left: 20px; padding-right: 200px;">
+            <div class="row">
+              <div class="col-12">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Observações: </th>
+                      <th scope="col">Chorou na entrada. Tivemos que acalmá-lo, pois sentiu falta do responsável.</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+
+        <div style="padding-left: 20px; padding-right: 1000px;">
+            <div class="row">
+              <div class="col-12">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th scope="col">Alimentação</th>
+                      <th scope="col">Registro das refeições: </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Café da manhã</td>
+                      <td>tudo</td>
+                    </tr>
+                    <tr>
+                        <td>Fruta</td>
+                        <td>metade</td>
+                      </tr>
+                      <tr>
+                        <td>Almoço</td>
+                        <td>tudo</td>
+                      </tr>
+                      <tr>
+                        <td>Nest. 11:30</td>
+                        <td>pouco</td>
+                      </tr>
+                      <tr>
+                        <td>Fruta</td>
+                        <td>tudo</td>
+                      </tr>
+                      <tr>
+                        <td>Lanche da tarde</td>
+                        <td>pouco</td>
+                      </tr>
+                      <tr>
+                        <td>Jantar</td>
+                        <td>nada</td>
+                      </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div style="padding-left: 20px;">
+                <div class="row">
+                  <div class="col-12">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th scope="col">Presença</th>
+                          <th scope="col">Período: </th>
+                          <th scope="col">Xixi: </th>
+                          <th scope="col">Evacuação: </th>
+                          <th scope="col">Banho: </th>                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Presente</td>
+                          <td>Manhã</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>0</td> 
+                        </tr>
+                        <tr>
+                            <td>Presente</td>
+                            <td>Tarde</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>1</td> 
+                          </tr>
+                      </tbody>
+                    </table>
+                  </div>
+    </div>
+
+    
+    <section>
+        <h5 class="pt-4 pb-2" style="padding-left: 0px;">Consultar diário anterior</h5>
         <form>
             <div class="d-inline form-group">
                 <label for="date" class="col-sm-1 col-form-label"></label>
@@ -70,7 +162,86 @@
                 </div>
             </div>
         </form>
-    </section>
+    </section>  
+
+    <br>
+    <h5 class="bd.title" id="content" style="padding-left: 0px;">Cardápio da semana</h5>
+    <br>
+    <div>
+        <div class="row">
+          <div class="col-12">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Segunda-feira</th>
+                  <th scope="col">Terça-feira</th>
+                  <th scope="col">Quarta-feira</th>
+                  <th scope="col">Quinta-feira</th>
+                  <th scope="col">Sexta-feira</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Café da manhã</td>
+                  <td>Pão de Leite, leite com cacau em pó
+                  </td>
+                  <td>Pão Francês, leite com cacau em pó</td>
+                  <td>Pão Caseirinho, leite com cacau em pó</td>
+                  <td>Pão de Leite, leite com cacau em pó</td>
+                  <td>Pão de Francês, leite com cacau em pó</td>
+                </tr>
+                <tr>
+                    <td>Fruta</td>
+                    <td>Melancia</td>
+                    <td>Mamão</td>
+                    <td>Morango</td>
+                    <td>Banana</td>
+                    <td>Abacate</td>
+                  </tr>
+                  <tr>
+                    <td>Almoço</td>
+                    <td>Arroz, feijão, mistura, salada</td>
+                    <td>Arroz, feijão, mistura, salada</td>
+                    <td>Arroz, feijão, mistura, salada</td>
+                    <td>Arroz, feijão, mistura, salada</td>
+                    <td>Arroz, feijão, mistura, salada</td>
+                  </tr>
+                  <tr>
+                    <td>Nest. 11:30</td>
+                    <td>Laranja</td>
+                    <td>Laranja</td>
+                    <td>Laranja</td>
+                    <td>Laranja</td>
+                    <td>Laranja</td>
+                  </tr>
+                  <tr>
+                    <td>Fruta</td>
+                    <td>Abacate</td>
+                    <td>Banana</td>
+                    <td>Morango</td>
+                    <td>Mamão</td>
+                    <td>Melancia</td>
+                  </tr>
+                  <tr>
+                    <td>Lanche da tarde</td>
+                    <td>Ovo cozido</td>
+                    <td>Milho na espiga</td>
+                    <td>Biscoito de polvilho</td>
+                    <td>Mini Pão de Hambúrguer</td>
+                    <td>Mini Pão de Leite</td>
+                  </tr>
+                  <tr>
+                    <td>Jantar</td>
+                    <td>Banana</td>
+                    <td>Laranja</td>
+                    <td>Banana</td>
+                    <td>Laranja</td>
+                    <td>Banana</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
 
     <script type="text/javascript">
         $(function() {
