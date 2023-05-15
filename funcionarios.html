@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Cadastro de Funcionários</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse bg-custom registration-form">
+    <span class="navbar-text text-custom">
+        Diário de classe digital | CEI Cláudio de Souza Novaes
+    </span>
+</nav>
+
+<div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="#">
+                    Renata Rocha
+                </a>
+            </li>
+            <li>
+                <a href="index.html">Tela inicial</a>
+            </li>
+            <li>
+                <a href="{{ url_for('funcionarios') }}">Funcionários</a>
+            </li>
+
+            <li>
+                <a href="diario.html">Diário</a>
+            </li>
+            <li>
+                <a href="trocas.html">Trocas</a>
+            </li>
+            <li>
+                <a href="alimentacao.html">Alimentação</a>
+            </li>
+            <li>
+                <a href="login.html">Sair</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
+    <h2>Funcionários</h2>
+    {% if Status == 'Ok' %}
+    <h3 style="color: #184D9D">Cadastro realizado com sucesso</h3>
+    {% elif Status == 'NE' %}
+    <h3 style="color: crimson">Funcionária não encontrada</h3>
+
+
+    {% endif%}
+
+    <div class="container">
+        <div class="shadow-lg p-3 mb-5 bg-white rounded row d-flex">
+            <form class="form-inline" action="{{ url_for('pesquisaFunc') }}" method=post>
+                <div class="form-group mx-sm-3 mb-2">
+                    <input type="text" class="form-control" id="pesquisar" name="pesquisar" placeholder="Nome a Pesquisar">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Pesquisa</button>
+            </form>
+        </div>
+    </div>
+
+    <form action="{{ url_for('inserirFunc') }}" method=post>
+        <div class="form-group">
+            <label for="funcionarioid">Número do Funcionário</label>
+            <input type="text" class="form-control" id="funcionarioid" name="funcionarioid" placeholder="Número de Identificação"
+            value={{ dados.funcionarioid }}>
+        </div>
+        <div class="form-group">
+            <label for="nomecompleto">Nome Completo</label>
+            <input type="text" class="form-control" id="nomecompleto" name="nomecompleto" placeholder="Nome do Funcionário"
+            value="{{  dados.nomecompleto }}">
+        </div>
+        <div class="form-group">
+            <label for="nomeapelido">Como quer ser chamado?</label>
+            <input type="text" class="form-control" id="nomeapelido" name="nomeapelido" placeholder="Como quer ser chamado"
+            value="{{ dados.nomeapelido }}">
+        </div>
+
+        <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="text" class="form-control" id="telefone" name="telefone" placeholder="Telefone"
+            value="{{ dados.telefone }}">
+        </div>
+
+
+        <div class="form-group">
+            <label for="cargo">Função</label>
+            <select class="form-control" id="cargo" name="cargo">
+                <option {% if dados.cargo =="Professora" %} selected {% endif %} >Professora</option>
+                <option {% if dados.cargo =="Coordenadora" %} selected {% endif %}>Coordenadora</option>
+                <option {% if dados.cargo =="Diretora" %} selected {% endif %}>Diretora</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="usuario">Endereço de email</label>
+            <input type="email" class="form-control" id="usuario" name="usuario" aria-describedby="emailHelp" placeholder="Seu email"
+            value={{ dados.usuario }}>
+            <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+        </div>
+        <div class="form-group">
+            <label for="Confirmasenha">Confirme a Senha</label>
+            <input type="password" class="form-control" id="Confirmasenha" name="Confirmasenha" placeholder="Senha">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary" name="Enviar" >Enviar</button>
+    </form>
+
+</div>
+
+
+</body>
+</html>
